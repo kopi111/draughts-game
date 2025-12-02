@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/piece.dart';
+import '../services/settings_service.dart';
 
 class PieceWidget extends StatelessWidget {
   final Piece piece;
@@ -15,13 +16,16 @@ class PieceWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final baseColor = piece.color == PieceColor.black
-        ? const Color(0xFF1A1A1A)
-        : const Color(0xFFC41E3A);
+    final settings = GameSettings();
 
-    final highlightColor = piece.color == PieceColor.black
-        ? const Color(0xFF4A4A4A)
-        : const Color(0xFFE84A5F);
+    final baseColor = piece.color == PieceColor.black
+        ? settings.player1Color
+        : settings.player2Color;
+
+    // Generate highlight color by lightening the base color
+    final highlightColor = HSLColor.fromColor(baseColor)
+        .withLightness((HSLColor.fromColor(baseColor).lightness + 0.15).clamp(0.0, 1.0))
+        .toColor();
 
     return Container(
       width: size * 0.75,

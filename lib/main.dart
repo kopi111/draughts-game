@@ -1,7 +1,27 @@
 import 'package:flutter/material.dart';
-import 'screens/menu_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'screens/splash_screen.dart';
+import 'services/settings_service.dart';
+import 'services/audio_service.dart';
+import 'services/stats_service.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize all services
+  await GameSettings().init();
+  await AudioService().init();
+  await StatsService().init();
+
+  try {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  } catch (e) {
+    debugPrint('Firebase not initialized: $e');
+  }
+
   runApp(const DraughtsApp());
 }
 
@@ -20,7 +40,7 @@ class DraughtsApp extends StatelessWidget {
           brightness: Brightness.dark,
         ),
       ),
-      home: const MenuScreen(),
+      home: const SplashScreen(),
     );
   }
 }

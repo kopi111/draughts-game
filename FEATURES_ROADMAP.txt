@@ -1,0 +1,88 @@
+================================================================================
+                    DRAUGHTS GAME - FEATURE ROADMAP
+================================================================================
+
+COMPLETED FEATURES:
+==================
+[x] Board color customization (8 themes)
+[x] Piece color customization (8 themes)
+[x] Settings persistence (saved to device)
+[x] Piece alignment fix for mobile
+[x] Sound effects service (with on/off toggle)
+[x] Haptic/vibration feedback (with on/off toggle)
+[x] Game statistics tracking
+[x] Win/loss counter, streaks, captures
+[x] Achievement system (8 achievements)
+[x] Statistics screen with charts
+[x] Settings screen for audio controls
+
+================================================================================
+
+PLANNED FEATURES FOR ENHANCED USER EXPERIENCE:
+=============================================
+
+1. SOUND EFFECTS & MUSIC
+   [ ] Move sound effect
+   [ ] Capture sound effect
+   [ ] King promotion sound
+   [ ] Win/lose sound
+   [ ] Background music (optional)
+   [ ] Sound on/off toggle in settings
+
+2. HAPTIC FEEDBACK
+   [ ] Vibration on piece selection
+   [ ] Vibration on capture
+   [ ] Vibration on game end
+
+3. GAME STATISTICS & HISTORY
+   [ ] Win/loss counter
+   [ ] Games played counter
+   [ ] Win rate percentage
+   [ ] Best winning streak
+   [ ] Statistics screen
+
+4. UNDO/REDO MOVES
+   [ ] Undo last move button
+   [ ] Move history display
+   [ ] Replay game feature
+
+5. HINTS SYSTEM
+   [ ] Show hint button (suggests best move)
+   [ ] Highlight possible moves toggle
+
+6. GAME TIMER
+   [ ] Optional timer mode
+   [ ] Time per player setting
+   [ ] Blitz mode
+
+7. ACHIEVEMENTS & REWARDS
+   [ ] First win achievement
+   [ ] Win streak achievements
+   [ ] Expert difficulty win achievement
+   [ ] Total games achievements
+
+8. TUTORIAL/HELP
+   [ ] How to play tutorial
+   [ ] Rules explanation
+   [ ] Tips and strategies
+
+9. ANIMATION ENHANCEMENTS
+   [ ] Piece capture animation
+   [ ] King crown animation
+   [ ] Victory celebration animation
+
+10. SHARE & SOCIAL
+    [ ] Share game result
+    [ ] Screenshot of final board
+    [ ] Challenge friend via link
+
+================================================================================
+
+IMPLEMENTATION PRIORITY:
+=======================
+Phase 1 (Current): Sound effects, haptic feedback, undo move
+Phase 2: Statistics, hints system
+Phase 3: Timer, achievements
+Phase 4: Tutorial, social features
+
+================================================================================

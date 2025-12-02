@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/position.dart';
 import '../models/game_state.dart';
+import '../services/settings_service.dart';
 import 'piece_widget.dart';
 
 class BoardWidget extends StatelessWidget {
@@ -46,6 +47,7 @@ class BoardWidget extends StatelessWidget {
 
   Widget _buildBoard(double squareSize) {
     return GridView.builder(
+      padding: EdgeInsets.zero, // Remove default padding to align with pieces
       physics: const NeverScrollableScrollPhysics(),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 8,
@@ -114,9 +116,10 @@ class BoardWidget extends StatelessWidget {
     final isSelected = gameState.selectedPosition == position;
     final isValidMove = gameState.validMoves.contains(position);
 
-    // Board colors
-    const lightColor = Color(0xFFFED100); // Gold
-    const darkColor = Color(0xFF009B3A); // Green
+    // Board colors from settings
+    final settings = GameSettings();
+    final lightColor = settings.lightSquareColor;
+    final darkColor = settings.darkSquareColor;
 
     // Responsive sizes
     final indicatorSize = squareSize * 0.35;
