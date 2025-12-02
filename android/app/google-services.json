@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "708792518560",
+    "project_id": "draughts-online-abc123",
+    "storage_bucket": "draughts-online-abc123.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708792518560:android:1db6dacfe4be6e5c6c06c5",
+        "android_client_info": {
+          "package_name": "com.example.draughts_game"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChaSPqYkPXBj7H3bfKdPWSkkLjkweMmNs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
